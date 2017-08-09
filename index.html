@@ -115,7 +115,7 @@
           <p>This is a running count of all the times you've clicked "Down".</p>
         </div>
     </div>
-    
+
     <div id="box-wrapper">
       <div id="welcome-language">
         <h3>Welcome to the Astronomer Event Tracking Game!</h3>
@@ -150,10 +150,10 @@
          timezone: "US/Eastern"
       })
       .then(function(res) {
-        chart.data(res).render();
+        chart_left.data(res).render();
       })
       .catch(function(err) {
-        chart.message(err.message);
+        chart_left.message(err.message);
       });
 
       var chart_right = new Keen.Dataviz()
@@ -170,10 +170,10 @@
            timezone: "US/Eastern"
         })
         .then(function(res) {
-          chart.data(res).render();
+          chart_right.data(res).render();
         })
         .catch(function(err) {
-          chart.message(err.message);
+          chart_right.message(err.message);
         });
 
         var chart_up = new Keen.Dataviz()
@@ -190,10 +190,10 @@
              timezone: "US/Eastern"
           })
           .then(function(res) {
-            chart.data(res).render();
+            chart_up.data(res).render();
           })
           .catch(function(err) {
-            chart.message(err.message);
+            chart_up.message(err.message);
           });
 
         var chart_down = new Keen.Dataviz()
@@ -210,10 +210,10 @@
              timezone: "US/Eastern"
           })
           .then(function(res) {
-            chart.data(res).render();
+            chart_down.data(res).render();
           })
           .catch(function(err) {
-            chart.message(err.message);
+            chart_down.message(err.message);
           });
   </script>
   <script src="js/bind_polyfill.js"></script>
