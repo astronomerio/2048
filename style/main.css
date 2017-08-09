@@ -1,25 +1,33 @@
 @import url(fonts/clear-sans.css);
 
-#fauxConsole {
-          position: absolute;
-          top: 275px;
-          z-index: 100000;
-          margin-left:40px;
-          background: #fefcf9;
-          padding: 10px;
-}
 
 #box-wrapper {
   margin-left: 700px;
-
+  top:-1700px;
+  position:relative;
 }
 #console-box {
   border-radius: 10px;
-  margin-top: -510px;
   width: 700px;
-  height: 500px;
-  border: 8px solid #0784aa;
+  height: 550px;
+  border: 8px solid #342f54;
   z-index: 0;
+}
+#welcome-language {
+  width: 700px;
+}
+
+#fauxConsole {
+  margin-top:-550px;
+  z-index: 100000;
+  margin-left:40px;
+  background: #fefcf9;
+  padding: 10px;
+}
+
+#chart-wrapper {
+  position: relative;
+  margin-top:-50px;
 }
 
 html, body {

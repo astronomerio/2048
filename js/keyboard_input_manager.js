@@ -60,16 +60,25 @@ KeyboardInputManager.prototype.listen = function () {
       }
     }
     if (mapped == 0) {
-      analytics.track('up')
+      analytics.track('up',{
+        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true)
+
+      })
     }
     if (mapped == 1) {
-      analytics.track('right')
+      analytics.track('right',{
+        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true)
+      })
     }
     if (mapped == 2) {
-      analytics.track('down')
+      analytics.track('down',{
+        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true)
+      })
     }
     if (mapped == 3) {
-      analytics.track('left')
+      analytics.track('left',{
+        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true)
+      })
     }
     // R key restarts the game
     if (!modifiers && event.which === 82) {
