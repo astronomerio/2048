@@ -33,7 +33,6 @@ KeyboardInputManager.prototype.emit = function (event, data) {
 
 KeyboardInputManager.prototype.listen = function () {
   var self = this;
-
   var map = {
     38: 0, // Up
     39: 1, // Right
@@ -54,17 +53,28 @@ KeyboardInputManager.prototype.listen = function () {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
                     event.shiftKey;
     var mapped    = map[event.which];
-
     if (!modifiers) {
       if (mapped !== undefined) {
         event.preventDefault();
         self.emit("move", mapped);
       }
     }
-
+    if (mapped == 0) {
+      analytics.track('up')
+    }
+    if (mapped == 1) {
+      analytics.track('right')
+    }
+    if (mapped == 2) {
+      analytics.track('down')
+    }
+    if (mapped == 3) {
+      analytics.track('left')
+    }
     // R key restarts the game
     if (!modifiers && event.which === 82) {
       self.restart.call(self, event);
+
     }
   });
 
@@ -128,6 +138,7 @@ KeyboardInputManager.prototype.listen = function () {
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
+  analytics.track("restart-game")
   event.preventDefault();
   this.emit("restart");
 };
@@ -135,6 +146,7 @@ KeyboardInputManager.prototype.restart = function (event) {
 KeyboardInputManager.prototype.keepPlaying = function (event) {
   event.preventDefault();
   this.emit("keepPlaying");
+  analytics.track('keep-playing');
 };
 
 KeyboardInputManager.prototype.bindButtonPress = function (selector, fn) {

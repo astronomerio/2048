@@ -1,9 +1,32 @@
 @import url(fonts/clear-sans.css);
+
+#fauxConsole {
+          position: absolute;
+          top: 275px;
+          z-index: 100000;
+          margin-left:40px;
+          background: #fefcf9;
+          padding: 10px;
+}
+
+#box-wrapper {
+  margin-left: 700px;
+
+}
+#console-box {
+  border-radius: 10px;
+  margin-top: -510px;
+  width: 700px;
+  height: 500px;
+  border: 8px solid #0784aa;
+  z-index: 0;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: #fefcf9  ;
+  color: #342f54;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
@@ -53,7 +76,7 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: #342f54;
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
@@ -117,7 +140,7 @@ hr {
 
 .container {
   width: 500px;
-  margin: 0 auto; }
+  padding-left:100px }
 
 @-webkit-keyframes fade-in {
   0% {
@@ -149,7 +172,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #bbada0;
+  background: #342f54;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -335,35 +358,35 @@ hr {
     background: #ede0c8;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    color: #fefcf9;
+    background: #ff9a09; }
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
+    color: #fefcf9;
     background: #f59563; }
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
+    color: #fefcf9;
     background: #f67c5f; }
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    color: #fefcf9;
+    background: #f4362c; }
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
+    color: #fefcf9;
+    background: #00ac6b;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
+    color: #fefcf9;
+    background: #0784aa;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
+    color: #fefcf9;
     background: #edc850;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
@@ -371,7 +394,7 @@ hr {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
+    color: #fefcf9;
     background: #edc53f;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
@@ -379,7 +402,7 @@ hr {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
+    color: #fefcf9;
     background: #edc22e;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
@@ -519,11 +542,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #8f7a66;
+  background: #342f54;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #fefcf9;
   height: 40px;
   line-height: 42px;
   display: block;
@@ -582,7 +605,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
+    background: #342f54;
     border-radius: 6px;
     width: 280px;
     height: 280px;
