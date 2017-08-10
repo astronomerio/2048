@@ -65,8 +65,6 @@ KeyboardInputManager.prototype.listen = function () {
     if (mapped == 0) {
       analytics.track('up',{
         'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true),
-        'bestScore':bestValue
-
       })
     }
     if (mapped == 1) {

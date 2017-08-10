@@ -3,18 +3,20 @@
 
 #box-wrapper {
   margin-left: 600px;
-  top:-1500px;
+  top:-1550px;
   position:relative;
 }
 
 #welcome-language {
+  position:relative;
   width: 500px;
+  top:40px;
 }
 
 #instructions {
   position:relative;
   width:500px;
-  font-size: 14px;
+  font-size: 15px;
   top: 475px;
 }
 #console-box {
