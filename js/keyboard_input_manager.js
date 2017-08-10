@@ -47,7 +47,9 @@ KeyboardInputManager.prototype.listen = function () {
     83: 2, // S
     65: 3  // A
   };
+  document.addEventListener('readystatechange', function() {
 
+  });
   // Respond to direction keys
   document.addEventListener("keydown", function (event) {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
@@ -59,9 +61,11 @@ KeyboardInputManager.prototype.listen = function () {
         self.emit("move", mapped);
       }
     }
+
     if (mapped == 0) {
       analytics.track('up',{
-        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true)
+        'anonymousId': Cookies.get('ajs_anonymous_id').replace(/\"/g, "", true),
+        'bestScore':bestValue
 
       })
     }

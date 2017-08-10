@@ -38,7 +38,7 @@
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">2048</h1>
+      <h1 id= "title" class="title">2048</h1>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
@@ -95,33 +95,28 @@
 
 
     <div id="chart-wrapper">
-        <div id="keen-left"></div>
-        <div id="left-description">
-          <p>This is a running count of all the times you've clicked "Left".</p>
-        </div>
+        <div class="keen-chart" id="keen-left"></div>
 
-        <div id="keen-right"></div>
-        <div id="left-description">
-          <p>This is a running count of all the times you've clicked "Right".</p>
-        </div>
+        <div class="keen-chart" id="keen-right"></div>
 
-        <div id="keen-up"></div>
-        <div id="left-description">
-          <p>This is a running count of all the times you've clicked "Up".</p>
-        </div>
+        <div class="keen-chart" id="keen-up"></div>
 
-        <div id="keen-down"></div>
-        <div id="left-description">
-          <p>This is a running count of all the times you've clicked "Down".</p>
-        </div>
+        <div class="keen-chart" id="keen-down"></div>
+
     </div>
 
     <div id="box-wrapper">
       <div id="welcome-language">
         <h3>Welcome to the Astronomer Event Tracking Game!</h3>
       </div>
+      <div id="instructions">
+        <p>As you play the game, your movements will be shown in the panel above.</p>
+        <p> Every time you make a move, a new event will be created and that event will fire to Keen IO, an embeddable analytics API.</p>
+        <p>See how high a score you can get and then refresh the page to see the updated counts that Keen iO powers.</p>
+      </div>
       <div id="console-box"></div>
       <div id="fauxConsole"></div>
+
     </div>
 
 
@@ -138,10 +133,13 @@
 
     var chart_left = new Keen.Dataviz()
       .el("#keen-left")
-      .height(240)
+      .height(175)
+      .width(175)
+      .colors(["#342f54"])
       .title("Left Clicks")
       .type("metric")
       .prepare();
+
     client
       .query("count", {
         event_collection: "left",
@@ -158,7 +156,9 @@
 
       var chart_right = new Keen.Dataviz()
         .el("#keen-right")
-        .height(240)
+        .height(175)
+        .width(175)
+        .colors(["#342f54"])
         .title("Right Clicks")
         .type("metric")
         .prepare();
@@ -178,7 +178,9 @@
 
         var chart_up = new Keen.Dataviz()
           .el("#keen-up")
-          .height(240)
+          .height(175)
+          .width(175)
+          .colors(["#342f54"])
           .title("Up Clicks")
           .type("metric")
           .prepare();
@@ -198,7 +200,9 @@
 
         var chart_down = new Keen.Dataviz()
           .el("#keen-down")
-          .height(240)
+          .height(175)
+          .width(175)
+          .colors(["#342f54"])
           .title("Down Clicks")
           .type("metric")
           .prepare();

@@ -2,24 +2,35 @@
 
 
 #box-wrapper {
-  margin-left: 700px;
-  top:-1700px;
+  margin-left: 600px;
+  top:-1500px;
   position:relative;
 }
-#console-box {
-  border-radius: 10px;
-  width: 700px;
-  height: 550px;
-  border: 8px solid #342f54;
-  z-index: 0;
-}
+
 #welcome-language {
-  width: 700px;
+  width: 500px;
 }
 
+#instructions {
+  position:relative;
+  width:500px;
+  font-size: 14px;
+  top: 475px;
+}
+#console-box {
+  position:relative;
+  top:-100px;
+  border-radius: 10px;
+  width: 525px;
+  height: 375px;
+  border: 7px solid #342f54;
+  z-index: 0;
+}
 #fauxConsole {
-  margin-top:-550px;
-  z-index: 100000;
+  position:relative;
+  top:-480px;
+  font-size:13px;
+  z-index: 100;
   margin-left:40px;
   background: #fefcf9;
   padding: 10px;
@@ -27,9 +38,14 @@
 
 #chart-wrapper {
   position: relative;
-  margin-top:-50px;
+  top:-750px;
+  width:275px;
+  left:1200px;
 }
 
+.keen-chart {
+  padding-bottom:20px;
+}
 html, body {
   margin: 0;
   padding: 0;
