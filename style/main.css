@@ -2,19 +2,17 @@
 
 
 #console-box {
+
+}
+#fauxConsole {
   margin: 30px auto;
   border-radius: 10px;
   width: 90%;
   height: 375px;
   border: 7px solid #342f54;
-}
-#fauxConsole {
-
-  font-size:13px;
-  z-index: 100;
-  margin-left:40px;
   background: #fefcf9;
   padding: 10px;
+  overflow: auto;
 }
 
 #chart-wrapper {
