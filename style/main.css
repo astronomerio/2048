@@ -22,9 +22,10 @@
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-justify-content: center;
+  justify-content: center;
   flex-flow: row wrap;
+  margin: 50px 0;
 }
 
 .container {
