@@ -1,36 +1,15 @@
 @import url(fonts/clear-sans.css);
 
 
-#box-wrapper {
-  margin-left: 600px;
-  top:-1550px;
-  position:relative;
-}
-
-#welcome-language {
-  position:relative;
-  width: 500px;
-  top:40px;
-}
-
-#instructions {
-  position:relative;
-  width:500px;
-  font-size: 15px;
-  top: 475px;
-}
 #console-box {
-  position:relative;
-  top:-100px;
+  margin: 30px auto;
   border-radius: 10px;
-  width: 525px;
+  width: 90%;
   height: 375px;
   border: 7px solid #342f54;
-  z-index: 0;
 }
 #fauxConsole {
-  position:relative;
-  top:-480px;
+
   font-size:13px;
   z-index: 100;
   margin-left:40px;
@@ -39,14 +18,31 @@
 }
 
 #chart-wrapper {
-  position: relative;
-  top:-750px;
-  width:275px;
-  left:1200px;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }
 
-.keen-chart {
-  padding-bottom:20px;
+.container {
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.game, .analytics {
+  width: 100%;
+  max-width: 500px;
+}
+
+.keen-dataviz {
+  margin:20px;
 }
 html, body {
   margin: 0;
@@ -163,10 +159,6 @@ hr {
   border-bottom: 1px solid #d8d4d0;
   margin-top: 20px;
   margin-bottom: 30px; }
-
-.container {
-  width: 500px;
-  padding-left:100px }
 
 @-webkit-keyframes fade-in {
   0% {
